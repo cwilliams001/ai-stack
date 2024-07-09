@@ -192,6 +192,18 @@ services:
           - driver: nvidia
             count: all
             capabilities: [gpu]
+  
+  # Pipelines
+  pipelines:
+    image: ghcr.io/open-webui/pipelines:main
+    container_name: pipelines
+    restart: always
+    network_mode: service:ts-open-webui
+    volumes:
+      - pipelines:/app/pipelines
+    environment:
+      - PUID=${PUID:-1000}
+      - PGID=${PGID:-1000}
 
 networks:
   internal_network:
@@ -202,3 +214,4 @@ volumes:
   ollama:
   open-webui:
   config:
+  pipelines:

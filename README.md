@@ -142,7 +142,32 @@ Example workflows are also available on HuggingFace in the [Stable Diffusion 3 
 
 This should show up as a service on your tailnet port `7860`
 
-### 4. Run Docker Compose
+### 4. Pipelines Setup
+
+Connect to Open WebUI
+
+
+Navigate to the Settings > Connections > OpenAI API section in Open WebUI.
+
+Set the API URL to http://localhost:9099 and the API key to 0p3n-w3bu!.
+
+If your Open WebUI is running in a Docker container, replace localhost with host.docker.internal in the API URL.
+
+
+Manage Configurations
+
+
+Go to the Admin Settings > Pipelines tab.
+
+Select your desired pipeline and modify the valve values directly from the WebUI.
+
+
+Add Anthropic Manifold Pipeline Plugin
+
+Add the plugin from anthropic_manifold_pipeline.py to your pipelines directory.
+
+
+### 5. Run Docker Compose
 
 ```bash
 docker compose up -d --build --force-recreate --remove-orphans
