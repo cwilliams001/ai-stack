@@ -1,6 +1,6 @@
 # AI-Stack
 
-This project sets up an AI stack at home for various machine learning and AI tasks, including Open Web UI, Ollama, Stable Diffusion, and Whisper services. The stack leverages Docker for containerization and Tailscale for secure access.
+This project sets up an AI stack at home for various machine learning and AI tasks, including Open Web UI, Ollama, Stable Diffusion, and Pipeline services. The stack leverages Docker for containerization and Tailscale for secure access.
 
 ## Table of Contents
 1. [Prerequisites](#prerequisites)
@@ -34,12 +34,11 @@ ai-stack
 ├── ollama
 ├── open-webui
 ├── stable-diffusion-webui-docker
-└── whisper
 ```
 
 - `.env`: Environment variables file.
 - `docker-compose.yaml`: Docker Compose configuration file.
-- `ollama`, `open-webui`, `stable-diffusion-webui-docker`, `whisper`: Directories for respective services and configurations.
+- `ollama`, `open-webui`, `stable-diffusion-webui-docker`: Directories for respective services and configurations.
 
 ## Setup
 
@@ -64,11 +63,7 @@ Populate the `.env` file with the necessary environment variables:
 PUID=1000
 PGID=1000
 BRAVE_SEARCH_API_KEY=your-brave-api-key
-DB_USER=your-db-user
-DB_PASS=your-db-pass
 TS_AUTHKEY=your-tailscale-auth-key
-WHISHPER_HOST=your-whisper-host
-LT_LOAD_ONLY=en,fr,es
 ```
 
 ### 3. Changes for ComfyUI
@@ -193,17 +188,9 @@ A user interface to interact with various AI-related tasks.
 
 Provides image generation capabilities.
 
-### 5. MongoDB - `mongo`
+## 5 Pipeline Services
 
-Database service for Whisper AI.
-
-### 6. LibreTranslate - `translate`
-
-Translation service for Whisper.
-
-### 7. Whisper AI - `whisper`
-
-An AI service for speech-to-text, translation, etc.
+Provides ability to add other API endpoints for AI services.
 
 ## Usage
 
@@ -222,11 +209,7 @@ Refer to the `.env` file for configuring environment-specific variables:
 - `PUID`: User ID for permissions.
 - `PGID`: Group ID for permissions.
 - `BRAVE_SEARCH_API_KEY`: API key for Brave web search.
-- `DB_USER`: Database username for MongoDB.
-- `DB_PASS`: Database password for MongoDB.
 - `TS_AUTHKEY`: Auth key for Tailscale.
-- `WHISHPER_HOST`: Host configuration for Whisper.
-- `LT_LOAD_ONLY`: Languages to load in LibreTranslate.
 
 ## Ports
 
