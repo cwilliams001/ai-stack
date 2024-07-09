@@ -145,7 +145,7 @@ This should show up as a service on your tailnet port `7860`
 ### 4. Run Docker Compose
 
 ```bash
-docker-compose up -d
+docker compose up -d --build --force-recreate --remove-orphans
 ```
 
 This will start all services defined in the `docker-compose.yaml` file.
