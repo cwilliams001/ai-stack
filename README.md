@@ -189,7 +189,7 @@ A user interface to interact with various AI-related tasks.
 
 Provides image generation capabilities.
 
-## 5 Pipeline Services
+### 5. Pipeline Services
 
 Provides ability to add other API endpoints for AI services.
 
