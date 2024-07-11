@@ -18,7 +18,8 @@ Before you begin, ensure you have:
 
 - [Docker](https://docs.docker.com/get-docker/) installed.
 - [Docker Compose](https://docs.docker.com/compose/install/) installed.
-- A Tailscale account and generated Auth key.
+- Genereate an OAuth Client token in [Tailscale](https://tailscale.com/blog/docker-tailscale-guide) for Docker and Tailscale integration.
+
 
 ## Folder Structure
 
@@ -45,7 +46,7 @@ ai-stack
 ### 1. Clone the Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/cwilliams001/ai-stack.git
 cd ai-stack
 ```
 
@@ -244,3 +245,4 @@ The services are networked through Tailscale and do not expose ports directly to
 - [Docker Compose Documentation](https://docs.docker.com/compose/)
 - [Tailscale Documentation](https://tailscale.com/kb/)
 - [TechnoTim](https://technotim.live/posts/ai-stack-tutorial/#basic-auth-hash)
+- [Alex Kretzschmar Video on YouTube](https://youtu.be/tqvvZhGrciQ)
